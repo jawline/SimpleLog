@@ -40,7 +40,11 @@ pub struct Log {
 
 impl Log {
     pub fn new(log_file: &str, limit: usize) -> Log {
-       Log{entries: Vec::with_capacity(limit), out_file: File::create(log_file).unwrap(), limit: limit}
+        Log {
+            entries: Vec::with_capacity(limit),
+            out_file: File::create(log_file).unwrap(),
+            limit: limit
+        }
     }
   
     pub fn add(&mut self, tag : &str, info : &str) {
