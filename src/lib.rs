@@ -18,7 +18,11 @@ pub enum Lines {
 
 impl LogEntry {
     pub fn new(tag : &str, info : &str) -> LogEntry {
-        LogEntry{tag: tag.to_string(), info: info.to_string(), time_entered: time::now()}
+        LogEntry {
+            tag: tag.to_string(),
+            info: info.to_string(),
+            time_entered: time::now()
+        }
     }
 }
 
